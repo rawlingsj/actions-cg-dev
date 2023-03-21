@@ -66,7 +66,7 @@ runs:
       shell: bash
       run: |
         TMP_CLONE_DIR="$(mktemp -d)"
-        git clone https://github.com/chainguard-dev/melange "${TMP_CLONE_DIR}"
+        git clone --branch soname https://github.com/rawlingsj/melange "${TMP_CLONE_DIR}"
         pushd "${TMP_CLONE_DIR}"
         make melange
         sudo env "PATH=$PATH" make install
